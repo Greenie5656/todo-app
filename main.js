@@ -34,7 +34,7 @@ function removeTask(index){
 
 // Function to render tasks
 function renderTasks(){
-    const taskList = document.getElementsById('task-list');
+    const taskList = document.getElementById('task-list');
     taskList.innerHTML = '';
 
     tasks.forEach((task, index) => {
