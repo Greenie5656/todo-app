@@ -1,15 +1,15 @@
 // Firebase configuration
 var firebaseConfig = {
-    apiKey: "***REMOVED***",
-    authDomain: "multi-user-tasks.firebaseapp.com",
-    projectId: "multi-user-tasks",
-    storageBucket: "multi-user-tasks.appspot.com",
-    messagingSenderId: "943578821989",
-    appId: "1:943578821989:web:9cb99d2d36365149a3dd8c"
+    apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+    authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+    projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+    storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.REACT_APP_FIREBASE_APP_ID
   };
   
-  // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
+  
   
   // Get a reference to the database service
   var db = firebase.firestore();
